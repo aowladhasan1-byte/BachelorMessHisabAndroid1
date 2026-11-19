@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "820235552454",
+    "project_id": "bachelor-hisab",
+    "storage_bucket": "bachelor-hisab.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820235552454:android:50940c03b718397a60f9c7",
+        "android_client_info": {
+          "package_name": "com.bachelormesshisab"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4kNLNJx23-1T9GrOYnKyXXweBPQJHa98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820235552454:android:44cf8f9c995f7f1360f9c7",
+        "android_client_info": {
+          "package_name": "com.example.bachelorhisab"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4kNLNJx23-1T9GrOYnKyXXweBPQJHa98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
