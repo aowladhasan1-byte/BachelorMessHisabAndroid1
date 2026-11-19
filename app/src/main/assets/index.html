@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#0b1220">
+<title>ব্যাচেলর মেস হিসাব</title>
+<style>
+:root{--bg:#f3f6fb;--card:#fff;--ink:#172033;--muted:#718096;--line:#e7edf5;--blue:#2563eb;--blue2:#1d4ed8;--green:#059669;--red:#dc2626;--amber:#d97706;--navy:#0b1220;--shadow:0 8px 24px rgba(15,23,42,.06)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;font-size:14px;padding-bottom:82px}button,input,select{font:inherit}button{cursor:pointer}.top{background:linear-gradient(135deg,#0b1220,#162b4d);color:#fff;padding:23px 18px 22px;border-radius:0 0 25px 25px}.toprow{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-size:21px;font-weight:800;letter-spacing:-.3px}.subtitle{font-size:12px;color:#c3d2e8;margin-top:3px}.top-actions{display:flex;gap:8px}.iconbtn{border:1px solid #ffffff35;background:#ffffff15;color:white;border-radius:12px;padding:9px 11px;font-size:12px}.monthbox{display:flex;align-items:center;gap:10px;margin-top:18px}.monthbox label{font-size:12px;color:#d3def0}.monthbox input{background:#fff;color:#172033;border:0;border-radius:10px;padding:9px 10px;max-width:160px}.wrap{max-width:760px;margin:0 auto;padding:0 14px}.content{padding-top:16px}.page{display:none}.page.active{display:block}.section-title{font-size:16px;font-weight:800;margin:7px 2px 12px}.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.stat{background:var(--card);padding:15px;border-radius:17px;box-shadow:var(--shadow);border:1px solid #edf1f7;min-height:94px}.stat .label{color:var(--muted);font-size:12px}.stat .value{font-size:21px;font-weight:800;margin-top:7px;letter-spacing:-.4px}.stat .hint{font-size:11px;color:#94a3b8;margin-top:3px}.blue{color:var(--blue)}.green{color:var(--green)}.red{color:var(--red)}.amber{color:var(--amber)}.card{background:var(--card);border:1px solid #edf1f7;border-radius:17px;padding:15px;margin-top:12px;box-shadow:var(--shadow)}.cardhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.cardtitle{font-weight:800;font-size:15px}.muted{color:var(--muted)}.small{font-size:12px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}.field label{font-size:12px;color:#64748b;font-weight:650}.field input,.field select{width:100%;border:1px solid #dce4ef;border-radius:11px;padding:11px 10px;background:#fbfdff;color:var(--ink);outline:none;min-width:0}.field input:focus,.field select:focus{border-color:#7aa5f8;box-shadow:0 0 0 3px #2563eb16}.btn{border:0;border-radius:11px;padding:11px 14px;font-weight:750}.primary{background:var(--blue);color:#fff}.primary:active{background:var(--blue2)}.soft{background:#eff5ff;color:#1d4ed8}.danger{background:#fff1f2;color:#be123c}.success{background:#ecfdf5;color:#047857}.wide{width:100%;margin-top:11px}.tablewrap{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:420px}th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);font-size:12px;white-space:nowrap}th{color:#64748b;font-weight:700;background:#f8fafc}td strong{font-size:13px}.empty{text-align:center;padding:22px 10px;color:#94a3b8;font-size:13px}.rowline{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid var(--line)}.rowline:last-child{border-bottom:0}.membername{font-weight:750}.pill{display:inline-block;border-radius:30px;padding:4px 8px;font-size:11px;font-weight:750;background:#eff6ff;color:#1d4ed8}.pill.good{background:#ecfdf5;color:#047857}.pill.bad{background:#fff1f2;color:#be123c}.nav{position:fixed;z-index:10;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e6ebf2;display:flex;justify-content:space-around;padding:7px 3px calc(7px + env(safe-area-inset-bottom));box-shadow:0 -8px 24px #0f172a0c}.nav button{border:0;background:transparent;color:#8793a5;font-size:10px;font-weight:700;display:flex;flex-direction:column;align-items:center;gap:3px;padding:5px 6px;min-width:0;flex:1}.nav button .ico{font-size:19px;line-height:1.2}.nav button.active{color:var(--blue)}.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.quick button{background:#f1f6ff;color:#1e40af;border:0;border-radius:13px;padding:12px 6px;font-weight:750;font-size:12px}.quick span{display:block;font-size:20px;margin-bottom:4px}.toolbar{display:flex;gap:8px;flex-wrap:wrap}.toolbar .btn{font-size:12px;padding:9px 11px}.note{background:#fffbeb;color:#92400e;border:1px solid #fde68a;padding:11px 12px;border-radius:12px;font-size:12px;line-height:1.5;margin-top:12px}.foot{text-align:center;color:#94a3b8;font-size:11px;padding:20px 0}.member-actions{display:flex;gap:6px}.mini{border:0;border-radius:8px;padding:6px 8px;font-size:11px}.totalrow{background:#f8fafc;font-weight:800}.hidden{display:none!important}
+@media(min-width:620px){.stats{grid-template-columns:repeat(4,minmax(0,1fr))}.top{padding-left:max(18px,calc((100% - 730px)/2));padding-right:max(18px,calc((100% - 730px)/2))}.wrap{padding:0 18px}}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="toprow"><div><div class="brand">🏠 ব্যাচেলর মেস হিসাব</div><div class="subtitle">বাজার • মিল • জমা — সব হিসাব এক জায়গায়</div></div><div class="top-actions"><button class="iconbtn" onclick="backup()">⬇ ব্যাকআপ</button></div></div>
+ <div class="monthbox"><label for="monthFilter">হিসাবের মাস</label><input type="month" id="monthFilter"></div>
+</header>
+<main class="wrap content">
+<section id="page-home" class="page active">
+ <div class="stats">
+  <div class="stat"><div class="label">🛒 মোট বাজার খরচ</div><div class="value" id="s-expense">৳০</div><div class="hint">নির্বাচিত মাস</div></div>
+  <div class="stat"><div class="label">🍽️ মোট মিল</div><div class="value" id="s-meals">০</div><div class="hint">সবার মিল যোগফল</div></div>
+  <div class="stat"><div class="label">📊 প্রতি মিলের রেট</div><div class="value blue" id="s-rate">৳০</div><div class="hint">বাজার ÷ মোট মিল</div></div>
+  <div class="stat"><div class="label">💰 মোট জমা</div><div class="value green" id="s-deposit">৳০</div><div class="hint">সদস্যদের জমা</div></div>
+ </div>
+ <div class="card"><div class="cardhead"><div class="cardtitle">⚡ দ্রুত এন্ট্রি</div><span class="muted small">এক ট্যাপে</span></div><div class="quick"><button onclick="go('bazar')"><span>🛒</span>বাজার যোগ</button><button onclick="go('meals')"><span>🍽️</span>মিল যোগ</button><button onclick="go('deposit')"><span>💵</span>জমা যোগ</button></div></div>
+ <div class="card"><div class="cardhead"><div class="cardtitle">👥 সদস্যভিত্তিক হিসাব</div><span class="muted small" id="member-count">০ জন</span></div><div id="home-members"></div></div>
+ <div class="note">💡 পরামর্শ: ফোন পরিবর্তন বা অ্যাপের ডেটা মুছে যাওয়ার আগে নিয়মিত <b>ব্যাকআপ ডাউনলোড</b> করে রাখুন।</div>
+</section>
+<section id="page-bazar" class="page">
+ <div class="section-title">🛒 বাজার খরচ যোগ করুন</div>
+ <div class="card"><form id="expense-form"><div class="formgrid">
+  <div class="field"><label>তারিখ</label><input type="date" id="expense-date" required></div>
+  <div class="field"><label>টাকার পরিমাণ (৳)</label><input type="number" id="expense-amount" min="0.01" step="0.01" placeholder="যেমন ৫০০" required></div>
+  <div class="field full"><label>কী কিনেছেন?</label><input id="expense-item" maxlength="80" placeholder="যেমন: চাল, ডাল, মাছ, সবজি" required></div>
+  <div class="field full"><label>কে টাকা দিয়েছেন?</label><select id="expense-payer"></select></div>
+ </div><button class="btn primary wide" type="submit">＋ বাজার যোগ করুন</button></form></div>
+ <div class="card"><div class="cardhead"><div class="cardtitle">এই মাসের বাজার তালিকা</div><span class="pill" id="expense-total">৳০</span></div><div class="tablewrap"><table><thead><tr><th>তারিখ</th><th>বাজার</th><th>দিয়েছেন</th><th>টাকা</th><th></th></tr></thead><tbody id="expense-list"></tbody></table></div></div>
+</section>
+<section id="page-meals" class="page">
+ <div class="section-title">🍽️ দৈনিক মিল এন্ট্রি</div>
+ <div class="card"><form id="meal-form"><div class="formgrid">
+  <div class="field"><label>তারিখ</label><input type="date" id="meal-date" required></div>
+  <div class="field"><label>সদস্য</label><select id="meal-member" required></select></div>
+  <div class="field"><label>সকালের মিল</label><input type="number" id="meal-breakfast" min="0" step="0.5" value="0"></div>
+  <div class="field"><label>দুপুরের মিল</label><input type="number" id="meal-lunch" min="0" step="0.5" value="1"></div>
+  <div class="field"><label>রাতের মিল</label><input type="number" id="meal-dinner" min="0" step="0.5" value="1"></div>
+ </div><button class="btn primary wide" type="submit">＋ মিল সংরক্ষণ করুন</button></form></div>
+ <div class="card"><div class="cardhead"><div class="cardtitle">এই মাসের মিল তালিকা</div><span class="pill" id="meal-total">০ মিল</span></div><div class="tablewrap"><table><thead><tr><th>তারিখ</th><th>সদস্য</th><th>সকাল</th><th>দুপুর</th><th>রাত</th><th>মোট</th><th></th></tr></thead><tbody id="meal-list"></tbody></table></div></div>
+</section>
+<section id="page-members" class="page">
+ <div class="section-title">👥 মেসের সদস্য</div>
+ <div class="card"><form id="member-form"><div class="field"><label>সদস্যের নাম</label><input id="member-name" maxlength="50" placeholder="সদস্যের নাম লিখুন" required></div><button class="btn primary wide" type="submit">＋ নতুন সদস্য যোগ করুন</button></form></div>
+ <div class="card"><div class="cardhead"><div class="cardtitle">সদস্য তালিকা</div><span class="pill" id="member-total">০ জন</span></div><div id="member-list"></div></div>
+</section>
+<section id="page-deposit" class="page">
+ <div class="section-title">💵 সদস্যের টাকা জমা</div>
+ <div class="card"><form id="deposit-form"><div class="formgrid">
+  <div class="field"><label>তারিখ</label><input type="date" id="deposit-date" required></div>
+  <div class="field"><label>সদস্য</label><select id="deposit-member" required></select></div>
+  <div class="field full"><label>জমার পরিমাণ (৳)</label><input type="number" id="deposit-amount" min="0.01" step="0.01" placeholder="যেমন ২০০০" required></div>
+  <div class="field full"><label>বিবরণ (ঐচ্ছিক)</label><input id="deposit-note" maxlength="100" placeholder="যেমন: মাসের অগ্রিম জমা"></div>
+ </div><button class="btn primary wide" type="submit">＋ জমা সংরক্ষণ করুন</button></form></div>
+ <div class="card"><div class="cardhead"><div class="cardtitle">এই মাসের জমার তালিকা</div><span class="pill good" id="deposit-total">৳০</span></div><div class="tablewrap"><table><thead><tr><th>তারিখ</th><th>সদস্য</th><th>বিবরণ</th><th>টাকা</th><th></th></tr></thead><tbody id="deposit-list"></tbody></table></div></div>
+</section>
+<section id="page-report" class="page">
+ <div class="section-title">📑 মাসিক রিপোর্ট ও হিসাব</div>
+ <div class="card"><div class="cardhead"><div class="cardtitle">মাসের সারাংশ</div><span class="muted small" id="report-month"></span></div><div id="report-summary"></div></div>
+ <div class="card"><div class="cardhead"><div class="cardtitle">সদস্যের চূড়ান্ত হিসাব</div></div><div class="tablewrap"><table><thead><tr><th>সদস্য</th><th>মিল</th><th>মিল বিল</th><th>জমা</th><th>অবস্থা</th></tr></thead><tbody id="report-list"></tbody></table></div><div class="small muted" style="margin-top:10px">অবস্থা = জমা − মিল বিল। পজিটিভ হলে অগ্রিম, নেগেটিভ হলে বাকি।</div></div>
+ <div class="card"><div class="cardhead"><div class="cardtitle">ডেটা ব্যাকআপ</div></div><p class="muted small">সব সদস্য, বাজার, মিল ও জমার তথ্য JSON ফাইলে সেভ বা আগের ব্যাকআপ থেকে ফিরিয়ে আনুন।</p><div class="toolbar"><button class="btn soft" onclick="backup()">⬇ ব্যাকআপ ডাউনলোড</button><button class="btn soft" onclick="restore()">⬆ ব্যাকআপ ইমপোর্ট</button></div><input type="file" id="backup-file" accept=".json,application/json" class="hidden"></div>
+ <div class="note">⚠️ এই অ্যাপের তথ্য এই ফোনেই থাকে। অন্য ফোনে স্বয়ংক্রিয়ভাবে যায় না।</div>
+</section>
+<div class="foot">Bachelor Mess Hisab • অফলাইন হিসাব অ্যাপ</div>
+</main>
+<nav class="nav">
+ <button class="active" data-tab="home" onclick="go('home')"><span class="ico">⌂</span>হোম</button>
+ <button data-tab="bazar" onclick="go('bazar')"><span class="ico">🛒</span>বাজার</button>
+ <button data-tab="meals" onclick="go('meals')"><span class="ico">🍽️</span>মিল</button>
+ <button data-tab="members" onclick="go('members')"><span class="ico">👥</span>সদস্য</button>
+ <button data-tab="deposit" onclick="go('deposit')"><span class="ico">💵</span>জমা</button>
+ <button data-tab="report" onclick="go('report')"><span class="ico">📑</span>রিপোর্ট</button>
+</nav>
+<div id="toast" style="position:fixed;left:50%;bottom:88px;transform:translateX(-50%);background:#172033;color:#fff;padding:10px 16px;border-radius:30px;font-size:12px;box-shadow:0 8px 20px #0002;display:none;z-index:30;max-width:90%;text-align:center"></div>
+<script>
+'use strict';
+const KEY='bachelor_mess_hisab_v1';
+const today=new Date();
+const isoDate=d=>{const x=new Date(d.getTime()-d.getTimezoneOffset()*60000);return x.toISOString().slice(0,10)};
+const monthNow=isoDate(today).slice(0,7);
+let db=loadDB();
+function emptyDB(){return {members:[],expenses:[],meals:[],deposits:[]}}
+function loadDB(){try{const x=JSON.parse(localStorage.getItem(KEY)||'{}');return {members:Array.isArray(x.members)?x.members:[],expenses:Array.isArray(x.expenses)?x.expenses:[],meals:Array.isArray(x.meals)?x.meals:[],deposits:Array.isArray(x.deposits)?x.deposits:[]}}catch(e){return emptyDB()}}
+function save(){localStorage.setItem(KEY,JSON.stringify(db));render()}
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,8)}
+function money(n){return '৳'+Number(n||0).toLocaleString('bn-BD',{minimumFractionDigits:0,maximumFractionDigits:2})}
+function num(n){return Number(n||0).toLocaleString('bn-BD',{maximumFractionDigits:2})}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function month(){return document.getElementById('monthFilter').value||monthNow}
+function inMonth(x){return String(x.date||'').slice(0,7)===month()}
+function selected(arr){return arr.filter(inMonth)}
+function memberName(id){return db.members.find(m=>m.id===id)?.name||'মুছে ফেলা সদস্য'}
+function totals(){const expenses=selected(db.expenses),meals=selected(db.meals),deposits=selected(db.deposits);const cost=expenses.reduce((s,x)=>s+Number(x.amount||0),0);const mealCount=meals.reduce((s,x)=>s+Number(x.total||0),0);const deposit=deposits.reduce((s,x)=>s+Number(x.amount||0),0);return {expenses,meals,deposits,cost,mealCount,deposit,rate:mealCount?cost/mealCount:0}}
+function byMember(){const t=totals();return db.members.map(m=>{const ml=t.meals.filter(x=>x.memberId===m.id).reduce((s,x)=>s+Number(x.total||0),0);const dp=t.deposits.filter(x=>x.memberId===m.id).reduce((s,x)=>s+Number(x.amount||0),0);const bill=ml*t.rate;return {...m,meals:ml,deposit:dp,bill,balance:dp-bill}})}
+function toast(s){const el=document.getElementById('toast');el.textContent=s;el.style.display='block';clearTimeout(window._toastTimer);window._toastTimer=setTimeout(()=>el.style.display='none',2300)}
+function go(tab){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('page-'+tab).classList.add('active');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));window.scrollTo(0,0);if(tab==='bazar'||tab==='meals'||tab==='deposit')fillMemberSelects()}
+function fillSelect(id,includeInactive=false){const el=document.getElementById(id);if(!el)return;const current=el.value;const members=db.members.filter(m=>includeInactive||m.active!==false);el.innerHTML='<option value="">সদস্য নির্বাচন করুন</option>'+members.map(m=>`<option value="${esc(m.id)}">${esc(m.name)}</option>`).join('');if(members.some(m=>m.id===current))el.value=current}
+function fillMemberSelects(){fillSelect('expense-payer');fillSelect('meal-member');fillSelect('deposit-member')}
+function render(){const t=totals(),people=byMember();
+ document.getElementById('s-expense').textContent=money(t.cost);document.getElementById('s-meals').textContent=num(t.mealCount);document.getElementById('s-rate').textContent=money(t.rate);document.getElementById('s-deposit').textContent=money(t.deposit);document.getElementById('member-count').textContent=num(db.members.filter(m=>m.active!==false).length)+' জন';
+ document.getElementById('home-members').innerHTML=people.length?people.map(m=>`<div class="rowline"><div><div class="membername">${esc(m.name)}</div><div class="muted small">${num(m.meals)} মিল · বিল ${money(m.bill)}</div></div><span class="pill ${m.balance>=0?'good':'bad'}">${m.balance>=0?'অগ্রিম ':'বাকি '}${money(Math.abs(m.balance))}</span></div>`).join(''):'<div class="empty">এখনো কোনো সদস্য যোগ করা হয়নি। সদস্য ট্যাব থেকে যোগ করুন।</div>';
+ document.getElementById('expense-total').textContent=money(t.cost);document.getElementById('expense-list').innerHTML=t.expenses.length?t.expenses.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(x=>`<tr><td>${esc(x.date)}</td><td>${esc(x.item)}</td><td>${esc(x.payerId?memberName(x.payerId):'—')}</td><td><strong>${money(x.amount)}</strong></td><td><button class="mini danger" onclick="removeItem('expenses','${esc(x.id)}')">মুছুন</button></td></tr>`).join(''):'<tr><td colspan="5" class="empty">এই মাসে বাজারের তথ্য নেই</td></tr>';
+ document.getElementById('meal-total').textContent=num(t.mealCount)+' মিল';document.getElementById('meal-list').innerHTML=t.meals.length?t.meals.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(x=>`<tr><td>${esc(x.date)}</td><td>${esc(memberName(x.memberId))}</td><td>${num(x.breakfast)}</td><td>${num(x.lunch)}</td><td>${num(x.dinner)}</td><td><strong>${num(x.total)}</strong></td><td><button class="mini danger" onclick="removeItem('meals','${esc(x.id)}')">মুছুন</button></td></tr>`).join(''):'<tr><td colspan="7" class="empty">এই মাসে মিল এন্ট্রি নেই</td></tr>';
+ document.getElementById('deposit-total').textContent=money(t.deposit);document.getElementById('deposit-list').innerHTML=t.deposits.length?t.deposits.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(x=>`<tr><td>${esc(x.date)}</td><td>${esc(memberName(x.memberId))}</td><td>${esc(x.note||'—')}</td><td><strong>${money(x.amount)}</strong></td><td><button class="mini danger" onclick="removeItem('deposits','${esc(x.id)}')">মুছুন</button></td></tr>`).join(''):'<tr><td colspan="5" class="empty">এই মাসে জমার তথ্য নেই</td></tr>';
+ document.getElementById('member-total').textContent=num(db.members.length)+' জন';document.getElementById('member-list').innerHTML=db.members.length?db.members.map(m=>`<div class="rowline"><div><div class="membername">${esc(m.name)}</div><div class="muted small">${m.active===false?'নিষ্ক্রিয় সদস্য':'সক্রিয় সদস্য'}</div></div><div class="member-actions"><button class="mini soft" onclick="toggleMember('${esc(m.id)}')">${m.active===false?'সক্রিয়':'বন্ধ'}</button><button class="mini danger" onclick="removeMember('${esc(m.id)}')">মুছুন</button></div></div>`).join(''):'<div class="empty">প্রথমে মেসের সদস্যদের নাম যোগ করুন</div>';
+ document.getElementById('report-month').textContent=month();document.getElementById('report-summary').innerHTML=`<div class="rowline"><span class="muted">মোট বাজার খরচ</span><strong>${money(t.cost)}</strong></div><div class="rowline"><span class="muted">মোট মিল</span><strong>${num(t.mealCount)}</strong></div><div class="rowline"><span class="muted">প্রতি মিলের রেট</span><strong class="blue">${money(t.rate)}</strong></div><div class="rowline"><span class="muted">মোট জমা</span><strong class="green">${money(t.deposit)}</strong></div><div class="rowline"><span class="muted">বাজার − জমা</span><strong>${money(t.cost-t.deposit)}</strong></div>`;
+ document.getElementById('report-list').innerHTML=people.length?people.map(m=>`<tr><td><strong>${esc(m.name)}</strong></td><td>${num(m.meals)}</td><td>${money(m.bill)}</td><td>${money(m.deposit)}</td><td><span class="pill ${m.balance>=0?'good':'bad'}">${m.balance>=0?'অগ্রিম':'বাকি'} ${money(Math.abs(m.balance))}</span></td></tr>`).join(''):'<tr><td colspan="5" class="empty">সদস্য যোগ করলে রিপোর্ট দেখা যাবে</td></tr>';
+ fillMemberSelects();
+}
+function removeItem(type,id){if(!confirm('এই এন্ট্রিটি মুছে ফেলবেন?'))return;db[type]=db[type].filter(x=>x.id!==id);save();toast('এন্ট্রি মুছে ফেলা হয়েছে')}
+function toggleMember(id){const m=db.members.find(x=>x.id===id);if(m){m.active=m.active===false;save()}}
+function removeMember(id){const used=db.expenses.some(x=>x.payerId===id)||db.meals.some(x=>x.memberId===id)||db.deposits.some(x=>x.memberId===id);if(used){toast('এই সদস্যের হিসাব আছে। মুছতে না চাইলে নিষ্ক্রিয় করুন।');return}if(!confirm('সদস্যটি মুছে ফেলবেন?'))return;db.members=db.members.filter(x=>x.id!==id);save()}
+document.getElementById('member-form').addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('member-name').value.trim();if(!name)return;if(db.members.some(m=>m.name.toLowerCase()===name.toLowerCase())){toast('এই নামের সদস্য আগে থেকেই আছে');return}db.members.push({id:uid(),name,active:true});e.target.reset();save();toast('সদস্য যোগ হয়েছে')});
+document.getElementById('expense-form').addEventListener('submit',e=>{e.preventDefault();const date=document.getElementById('expense-date').value,item=document.getElementById('expense-item').value.trim(),amount=Number(document.getElementById('expense-amount').value),payerId=document.getElementById('expense-payer').value;if(!date||!item||!(amount>0)){toast('সঠিক তথ্য দিন');return}db.expenses.push({id:uid(),date,item,amount,payerId});e.target.reset();document.getElementById('expense-date').value=isoDate(new Date());save();toast('বাজারের হিসাব যোগ হয়েছে')});
+document.getElementById('meal-form').addEventListener('submit',e=>{e.preventDefault();const date=document.getElementById('meal-date').value,memberId=document.getElementById('meal-member').value,b=Number(document.getElementById('meal-breakfast').value||0),l=Number(document.getElementById('meal-lunch').value||0),d=Number(document.getElementById('meal-dinner').value||0),total=b+l+d;if(!date||!memberId||b<0||l<0||d<0||total<=0){toast('সদস্য ও মিলের সঠিক সংখ্যা দিন');return}const existing=db.meals.find(x=>x.date===date&&x.memberId===memberId);if(existing){if(!confirm('এই সদস্যের এই তারিখে মিল আছে। আগের হিসাবের সঙ্গে যোগ করবেন?'))return;existing.breakfast+=b;existing.lunch+=l;existing.dinner+=d;existing.total=existing.breakfast+existing.lunch+existing.dinner}else db.meals.push({id:uid(),date,memberId,breakfast:b,lunch:l,dinner:d,total});document.getElementById('meal-breakfast').value=0;document.getElementById('meal-lunch').value=1;document.getElementById('meal-dinner').value=1;document.getElementById('meal-date').value=isoDate(new Date());save();toast('মিলের হিসাব সংরক্ষণ হয়েছে')});
+document.getElementById('deposit-form').addEventListener('submit',e=>{e.preventDefault();const date=document.getElementById('deposit-date').value,memberId=document.getElementById('deposit-member').value,amount=Number(document.getElementById('deposit-amount').value),note=document.getElementById('deposit-note').value.trim();if(!date||!memberId||!(amount>0)){toast('সঠিক তথ্য দিন');return}db.deposits.push({id:uid(),date,memberId,amount,note});e.target.reset();document.getElementById('deposit-date').value=isoDate(new Date());save();toast('জমার হিসাব সংরক্ষণ হয়েছে')});
+document.getElementById('monthFilter').addEventListener('change',render);
+function backup(){const json=JSON.stringify({app:'BachelorMessHisab',version:1,exportedAt:new Date().toISOString(),...db},null,2);if(window.AndroidBridge&&AndroidBridge.saveBackup){AndroidBridge.saveBackup(json);return}const blob=new Blob([json],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='mess-hisab-backup.json';a.click();URL.revokeObjectURL(url);toast('ব্যাকআপ ডাউনলোড শুরু হয়েছে')}
+function restore(){if(window.AndroidBridge&&AndroidBridge.importBackup){AndroidBridge.importBackup();return}document.getElementById('backup-file').click()}
+document.getElementById('backup-file').addEventListener('change',e=>{const file=e.target.files[0];if(!file)return;const r=new FileReader();r.onload=()=>{try{applyBackup(String(r.result));toast('ব্যাকআপ ফিরিয়ে আনা হয়েছে')}catch(err){toast('ব্যাকআপ ফাইল সঠিক নয়')}};r.readAsText(file);e.target.value=''})
+function applyBackup(text){const x=JSON.parse(text);if(!x||!Array.isArray(x.members)||!Array.isArray(x.expenses)||!Array.isArray(x.meals)||!Array.isArray(x.deposits))throw new Error('invalid backup');db={members:x.members,expenses:x.expenses,meals:x.meals,deposits:x.deposits};save()}
+window.loadBackupFromAndroid=function(text){try{if(!confirm('বর্তমান ডেটা ব্যাকআপের ডেটা দিয়ে বদলে যাবে। চালিয়ে যাবেন?'))return;applyBackup(text);toast('ব্যাকআপ সফলভাবে ইমপোর্ট হয়েছে')}catch(e){toast('ব্যাকআপ ফাইল সঠিক নয়')}};
+window.handleAndroidBack=function(){return false};
+const todayStr=isoDate(new Date());document.getElementById('monthFilter').value=monthNow;['expense-date','meal-date','deposit-date'].forEach(id=>document.getElementById(id).value=todayStr);render();
+</script>
+</body>
+</html>
